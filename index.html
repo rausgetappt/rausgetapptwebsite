@@ -4,9 +4,65 @@
     <head>
         <link rel="shortcut icon" type="image/png" href="favicon.png">
         <title>Rausgetappts Website</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
     <body>
+        <div class="navbar">
+            <ul>
+              <li class="active">
+                <a href="#">
+                  <i class='bx bx-home icon'></i>
+                  <i class='bx bxs-home activeIcon'></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-user icon'></i>
+                  <i class='bx bxs-user activeIcon'></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-heart icon'></i>
+                  <i class='bx bxs-heart activeIcon'></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-folder icon'></i>
+                  <i class='bx bxs-folder activeIcon'></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-cog icon'></i>
+                  <i class='bx bxs-cog activeIcon'></i>
+                </a>
+              </li>
+              <div class="indicator"></div>
+            </ul>
+          </div>
+        
+          <script>
+        
+          const navBar = document.querySelector(".navbar")
+                allLi = document.querySelectorAll("li");
+        
+          allLi.forEach((li, index) => {
+             li.addEventListener("click" , e =>{
+               e.preventDefault(); //preventing from submitting
+               navBar.querySelector(".active").classList.remove("active");
+               li.classList.add("active");
+        
+               const indicator = document.querySelector(".indicator");
+               indicator.style.transform = `translateX(calc(${index * 90}px))`;
+             });
+          });
+        
+          </script>
         <button onClick="window.location.href='https://www.mediafire.com/file/wrofb9jgxj4p2ib/Terrorismus+am+Beispiel+911+Leon+Frerichs+Abschlusspräsentation+Realschule.pptx/file';">Präsentation Download (Server 1)</button>
         <button onClick="window.location.href='https://mega.nz/file/1dsSgBwI#u5ImEN4hBOhNpT8prJoeD248bYeA8C8IPrdnb2vodGw';">Präsentation Download (Server 2)</button>
     </body>
