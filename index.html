@@ -10,7 +10,8 @@
         <title>Rausgetappts Website</title>
         <link rel="stylesheet" href="style.css">
         <!-- Boxicons CSS -->
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -20,84 +21,113 @@
 
 
 
-        <div class="navbar">
-            <ul>
-              <li class="active">
-                <a href="https://www.mediafire.com/file/wrofb9jgxj4p2ib/Terrorismus+am+Beispiel+911+Leon+Frerichs+Abschlusspräsentation+Realschule.pptx/file">
-                  <i class='bx bx-home icon'></i>
-                  <i class='bx bxs-home activeIcon'></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-user icon'></i>
-                  <i class='bx bxs-user activeIcon'></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-heart icon'></i>
-                  <i class='bx bxs-heart activeIcon'></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-folder icon'></i>
-                  <i class='bx bxs-folder activeIcon'></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-cog icon'></i>
-                  <i class='bx bxs-cog activeIcon'></i>
-                </a>
-              </li>
-              <div class="indicator"></div>
-            </ul>
-          </div>
-        
-          <script>
-        
-          const navBar = document.querySelector(".navbar")
-                allLi = document.querySelectorAll("li");
-        
-          allLi.forEach((li, index) => {
-             li.addEventListener("click" , e =>{
-               e.preventDefault(); //preventing from submitting
-               navBar.querySelector(".active").classList.remove("active");
-               li.classList.add("active");
-        
-               const indicator = document.querySelector(".indicator");
-               indicator.style.transform = `translateX(calc(${index * 90}px))`;
-             });
-          });
-        
-          </script>
-
-<div class="wrapper">
-    <div class="title">Login Form</div>
-    <form action="#">
-      <div class="field">
-        <input type="text" required>
-        <label>Email Address</label>
-      </div>
-      <div class="field">
-        <input type="password" required>
-        <label>Password</label>
-      </div>
-      <div class="content">
-        <div class="checkbox">
-          <input type="checkbox" id="remember-me">
-          <label for="remember-me">Remember me</label>
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">Rausgetappt</div>
+            <i class='bx bx-menu' id="btn" ></i>
         </div>
-        <div class="pass-link"><a href="#">Forgot password?</a></div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+             <span class="tooltip">Dashboard</span>
+          </li>
+          <li>
+           <a href="#">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">User</span>
+           </a>
+           <span class="tooltip">User</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Messages</span>
+           </a>
+           <span class="tooltip">Messages</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Analytics</span>
+           </a>
+           <span class="tooltip">Analytics</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-folder' ></i>
+             <span class="links_name">File Manager</span>
+           </a>
+           <span class="tooltip">Files</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cart-alt' ></i>
+             <span class="links_name">Order</span>
+           </a>
+           <span class="tooltip">Order</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Setting</span>
+           </a>
+           <span class="tooltip">Setting</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <!--<img src="profile.jpg" alt="profileImg">-->
+               <div class="name_job">
+                 <div class="name">Rausgetappt</div>
+                 <div class="job">Schüler</div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
       </div>
-      <div class="field">
-        <input type="submit" value="Login">
-      </div>
-      <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-    </form>
-  </div>
+      <section class="home-section">
+          <div class="text">Dashboard</div>
+      </section>
+      <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+    
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+      });
+    
+      searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+    
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+       if(sidebar.classList.contains("open")){
+         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+       }else {
+         closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+       }
+      }
+      </script>
     
 
 
