@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #7d2ae8;
+    background: #fff;
   }
   .navbar{
     position: relative;
@@ -43,7 +43,7 @@
   .navbar ul li a i{
     position: absolute;
     font-size: 38px;
-    color: #7d2ae8;
+    color: #430ed4;
   }
   ul li a i.activeIcon{
     opacity: 0;
@@ -61,7 +61,7 @@
     left: 34px;
     height: 36px;
     width: 25px;
-    background: #7d2ae8;
+    background: #430ed4;
     border-radius: 50%;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -74,7 +74,7 @@
     width: 20px;
     background: #fff;
     border-bottom-right-radius: 20px;
-    box-shadow: 0 10px 0 #7d2ae8;
+    box-shadow: 0 10px 0 #430ed4;
   }
   ul .indicator::after{
     content: "";
@@ -85,6 +85,6 @@
     width: 20px;
     background: #fff;
     border-bottom-left-radius: 20px;
-    box-shadow: 0 10px 0 #7d2ae8;
+    box-shadow: 0 10px 0 #430ed4;
   }
   
