@@ -12,7 +12,7 @@
   top: 0;
   height: 100%;
   width: 78px;
-  background: #11101D;
+  background: #292929;
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -110,7 +110,7 @@
   border: none;
   border-radius: 12px;
   transition: all 0.5s ease;
-  background: #1d1b31;
+  background: #292929;
 }
 .sidebar.open input{
   padding: 0 20px 0 50px;
@@ -126,7 +126,7 @@
   color: #FFF;
 }
 .sidebar.open .bx-search:hover{
-  background: #1d1b31;
+  background: #292929;
   color: #FFF;
 }
 .sidebar .bx-search:hover{
