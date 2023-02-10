@@ -1,255 +1,75 @@
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.Navi-leiste {
-    position: fixed;
-    border-radius: 20px;
-    height: fit-content;
-    display: inline-flex;
-    background-color: rgba(134, 134, 134, 0.288);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    align-items: center;  
-    padding: 10px;
-    margin: 30px 1%;
-}
-.Navi-leiste li {
-    list-style: none;
+/*General*/
+*{
+    font-family: Arial;
     color: white;
-    font-family: sans-serif;
-    font-weight: bold;
-    padding: 12px 16px;
-    margin: 0 8px;
-    position: relative;
-    cursor: pointer;
-    white-space: nowrap;
-}
-.Navi-leiste li::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    transition: 0.2s;
-    border-radius: 14px;
-}
-.Navi-leiste li:hover {
-    color: rgb(0, 0, 0);
-}
-.Navi-leiste li:hover::before {
-    background: white;
-    box-shadow: black;
-    transform: scale(1.4);
+    margin: 0;
+    padding: 0;
 }
 
-body{
-  font-size: 20px;
-}
-a{
-  text-decoration: none;
-}
+/*Title font settings and effects*/
 .content{
-  text-align: center;
-}
-.content h1{
-  font-size: 100px;
-  color: rgb(255, 255, 255);
-  font-weight: 600;
-  transition:  .3s;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.content h1:hover{
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
-  color: transparent;
-  cursor: default;
-}
-.container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    position: relative;
-    align-items: center;
-  
+    text-align: center;
+    cursor: pointer;
 }
 
-section {
+.content a{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+    transition: 1s;
+    text-decoration: none;
+}
+.content h2{
+    font-family: Sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
+.content a:hover{
+    -webkit-text-stroke: 1.5px #fff;
+    transition: .7s;
+    color: transparent;
+}
+
+/*Custom scrollbar that overwrites the default one
+::-webkit-scrollbar{
+    width: 10em;
+}
+*/
+/*Video playing in the background*/
+.backgroundvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .backgroundvideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .backgroundvideo{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.stock{
+    text-align: center;
+    color: black;
+    background-color: white;
+    background-size: cover;
+}
+
+.section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 100vh;   
+    height: 500vh;
 }
-
-section h1 {
-    font-size: 4rem;
-}
-
-section p {
-    font-size: 1.5rem;
-}
-
-section#home {
-    background: url(waveloop.gif);
-    background-size: cover;
-  }
-
-section#erster {
-     background-color: white;
-     background-size: cover;
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-section#zweiter {
-    background-color: black;
-    background-size: cover;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white
- }
-section#dritter {
-    background-color: white;
-    background-size: cover;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black
- }
-
-section#vierter {
-  background-color: black;
-  background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: white 
-}
-
-
-section#funfter {
-    background-color: white;
-    background-size: cover;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black
-
-}
-
-section#sechster {
-    background-color: black;
-    background-size: cover;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white
-}
-
-
-section#siebter {
-  background-color: white;
-  background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: black
-
-}
-
-section#achter {
-  background-color: black;
-  background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: white
-
-}
-
-section#unserteam {
-  background-color: white;
-  background-position: bottom;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.HochScrollKnopf{
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: rgba(252, 252, 252, 0.5);
-    bottom: 40px;
-    right: 50px;
-    border-radius: 30px;
-	scroll-behavior: smooth;
-    text-decoration: none;
-    line-height: 50px;
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-  }
-
-@media (min-aspect-ratio: 16/9){
-  .back-video{
-    width: 100%;
-    height: auto;
-  }
-}
-@media (min-aspect-ratio: 16/9){
-  .back-video{
-    width: auto;
-    height: 100%;
-  }
-}
-.erster{
-  margin: 5%;
-}
-
-.zweiter{
-  margin: 5%;
-}
-
-.dritter{
-  margin: 5%;
-}
-
-.vierter{
-  margin: 4%;
-}
-
-.funfter{
-  margin: 5%;
-}
-
-.sechster{
-  margin: 5%;
-}
-
-.siebter{
-  margin: 5%;
-}
-
-.achter{
-  margin: 5%;
-}
-.Tabelle{
-  border-collapse: collapse;
-  font-size: 0.9em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-  min-width: 800px;
-  border-radius: 5px 5px 0 0;
-  box-shadow: 0 0 20px rgb(143, 231, 255);
-  width: 60%;
-  margin: 10px auto;
-}
-.Tabelle thead tr{
-  color: white;
-  text-align: center;
-  font-weight: bold;
-
-}
-.Tabelle th,
-.Tabelle td{
-  padding: 12px 15px;
-}
-
-.Tabelle tbody tr{
-  border-bottom: 1px solid white;
-}
-
-
-
-
