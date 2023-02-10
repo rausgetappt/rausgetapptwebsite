@@ -8,6 +8,7 @@
 
 /*Title font settings and effects*/
 .content{
+    top: 50%;
     text-align: center;
     cursor: pointer;
 }
@@ -15,7 +16,6 @@
 .content a{
     font-size: 100px;
     color: #fff;
-    top: 50%;
     font-weight: 600;
     transition: 1s;
     text-decoration: none;
