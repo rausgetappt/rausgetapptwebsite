@@ -8,8 +8,7 @@
 
 /*Title font settings and effects*/
 .content{
-    top: 50%;
-    text-align: center;
+    text-align: justify;
     cursor: pointer;
 }
 
