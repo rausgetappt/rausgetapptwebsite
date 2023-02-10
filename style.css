@@ -15,6 +15,7 @@
 .content a{
     font-size: 100px;
     color: #fff;
+    top: 50%;
     font-weight: 600;
     transition: 1s;
     text-decoration: none;
@@ -41,7 +42,6 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    top: 50%;
     z-index: -1;
 }
 
