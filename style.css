@@ -31,12 +31,6 @@
     color: transparent;
 }
 
-/*Custom scrollbar that overwrites the default one
-::-webkit-scrollbar{
-    width: 10em;
-}
-*/
-/*Video playing in the background*/
 .backgroundvideo{
     position: absolute;
     right: 0;
