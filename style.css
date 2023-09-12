@@ -2,14 +2,13 @@
 *{
     font-family: Arial;
     color: white;
-    margin: 0;
-    padding: 0;
 }
 
 /*Title font settings and effects*/
 .content{
     text-align: center;
     cursor: pointer;
+    padding: 10px;
 }
 
 .content a{
@@ -18,6 +17,8 @@
     font-weight: 600;
     transition: .5s;
     text-decoration: none;
+    margin: 100px;
+    padding-top: 30px;
 }
 .content h2{
     font-family: Sans-serif;
@@ -66,9 +67,24 @@
     height: 500vh;
 }
 
-.sub {
+.sub1 {
     position: relative;
     color: white;
     cursor: pointer;
-    align-self: auto;
+    align-self: flex-end;
+}
+
+.sub2 h1{
+    position: relative;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    justify-content: center;
+}
+
+.sub3 {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
 }
